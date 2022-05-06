@@ -240,10 +240,10 @@ console.log("Este es mi array original de meses y dias revueltos", meses);
 
 */
 
-meses.splice(0,2); //elimina los dos elementos de la posicion 2
+meses.splice(0,2); //*elimina los dos elementos de la posicion 2
 console.log("elimine los dos elementos que no son meses del arreglo", meses);
 
-meses.splice(1,1); // elimina el elemento de la posicion 1
+meses.splice(1,1); //*elimina el elemento de la posicion 1
 console.log("Elimine el elemento de la posicion 1", meses);
 
 
@@ -254,9 +254,9 @@ var todosLosMesesDelAnio = ["enero", "febrero", "marzo", "abril", "mayo", "junio
 
 
 console.log("los meses que no tienen 30 dias son: ", todosLosMesesDelAnio)
-//Usando splice quita todos los meses del anio que tengan 30 dias
+//*Usando splice quita todos los meses del anio que tengan 30 dias
 
-/* 
+/*
 Agregar nuevos elementos al arreglo sin eliminar ningun elemento
 
 En este ultimo ejemplo, podemos agregar nuevos elementos sin eliminar ningun elemento del array, definiendo en el 0 el parametro que indica la cantidad de elelmentos a eliminar.
@@ -295,3 +295,183 @@ console.log("Detras de Lucia y antes de Roberoto se clasifican tres nuevos corre
 carreritas.unshift("Federico");
 
 console.log("Hay un nuevo concursante que toma el primer puesto: Federico", carreritas);
+
+
+console.log("");
+console.log("-----------METODOS ACCESORES-------------");
+console.log("");
+
+//* metodo length():e Nos permite saber la cantidad de elementos que tiene un array.
+
+var ensalada = ["espinaca","lechuga", "tomate", "cebolla", "pimiento", "zanahoria", "ajo","puerro", "calabaza"];
+
+console.log("Esta es la cantida de elementos que hay dentro de mi ensalada", ensalada.length);
+
+//* metodo concat (): nos permite unir dos arrrays. Devuelve un nuevo arreglo con los elementos de los dos arrays que le pasemos como parametro.
+
+
+let dulces = ["galletas", "helado", "gomitas", "chocolate"];
+
+var dulcesYEnsalada = ensalada.concat(dulces);
+
+console.log('Esta es la union de mi arreglo ensalada y mi arreglo dulces', dulcesYEnsalada);
+
+//*comando join(): nos permite unir un array en una cadena de texto.
+
+console.log(ensalada.join(" "));
+
+//* indexOf(): nos permite saber la posicion de un elemento dentro de un array.
+console.log("Esta es la posicion de la palabra lechuga en mi ensalada,", ensalada.indexOf("zanahoria"));
+
+//* metodo lastindeOf: nos permite saber la posicion del ultimo elemento de un array.
+
+console.log("la ultima posicion de mi lechuga en el arreglo ensalada es de: ", ensalada.lastIndexOf("lechuga"));
+
+
+var texto = "Me gusta mucho el bootcamp de programacion de Generation, porque aprendo muchas cosas de programacion";
+
+console.log("la ultima posicion de la palabra programacion es: ", texto.lastIndexOf("programacion"))
+
+//*metodo toString(): nos permite convertir un array en una cadena de texto.
+
+
+console.log(ensalada.toString());
+
+//* valueOf(): nos permite devolver el valor de un array
+
+
+console.log("Este es el valor del arreglo ensalada", ensalada.valueOf());
+
+//* includes(): nos permite saber si un elemento existe en un array.
+
+console.log('asi sabemos si el ojo se en cuentra dentro de nuestro arreglo ensalada', ensalada.includes("ajo"));
+
+console.log("Asi sabemos si el brocoli se encuentra dentro de nuestro arreglo ensalada", ensalada.includes("brocoli"));
+
+//* split(): nos permite separar un a cadena de texto en un array.
+
+let cadenita = "Hola, me llamo Felipe y me gusta programar en JavaScript";
+
+console.log(cadenita.split(" ")); //imprime un array con los elementos separados por un espacio.
+console.log(cadenita.split(" ").reverse()); // imprime un array con los elementos separados por un espacio.
+
+//! EJERCICIO CURP
+
+/* 
+Inicial y primera vocal del apellido paterno (Ejemplo: Fernandez=Fe)
+Inicial del apellido materno (Perez=P)
+Inicial del nombre principal (Manuel=M)
+Fecha de nacimiento (en el siguiente formato “1989-02-04” en 6 dígitos = 890204)
+Sexo (H si es hombre, M para mujer)
+Abreviatura del lugar de nacimiento (Ver lista de abreviaturas de cada estado de México aquí) (Ejemplo: Aguascalientes=AS)
+Primera consonante no inicial del apellido del padre (Fernandez=R)
+Primera consonante no inicial del apellido de la madre (Perez=R)
+Primera consonante no inicial del nombre del consultor de la curp (Manuel=N)
+Dos dígitos llamados Homoclave (Ver qué es la homoclave del curp)
+
+*/
+
+//let apellidopaterno = prompt("Inserte Apellido Paterno: ");
+//let apellidoMaterno = prompt ("Ingresa apellido materno: ");
+//let nombre = prompt("Ingresa  solo tu primer nombre ");
+let fechaDeNacimiento = prompt("Inserta tu fecha de nacimiento (Año-mes-dia)");
+let genero = prompt("Ingresa tu genero (Hombre o Mujer)");
+//let estado = prompt ("Ingresa el estado en donde naciste");
+
+//let apellidopaternoCURP = apellidopaterno.slice(0,2);
+//let apellidomaternoCURP = apellidoMaterno[0];
+//let nombreCURP = nombre[0];
+let fechanacimientoCurp = fechaDeNacimiento.slice(2);
+let generoCurp = genero[0];
+
+if (estado == 'Aguascalientes') {
+    estadocurp = 'AGS';
+}
+else if (estado == 'Baja California') {
+    estadocurp = 'BCN';
+}
+else if (estado == 'Chihuahua') {
+    estadocurp = 'CHI';
+}
+if (estado == 'Campeche') {
+    estadocurp = 'CAM';
+}
+else if (estado == 'Ciudad de México') {
+    estadocurp = 'DIF';
+}
+else if (estado == 'Coahuila') {
+    estadocurp = 'COA';
+}
+else if (estado == 'Colima') {
+    estadocurp = 'COL';
+}
+else if (estado == 'Durango') {
+    estadocurp = 'DUR';
+}
+else if (estado == 'Guanajuato') {
+    estadocurp = 'GTO';
+}
+else if (estado == 'Guerrero') {
+    estadocurp = 'GRO';
+}
+else if (estado == 'Hidalgo') {
+    estadocurp = 'HID';
+}
+else if (estado == 'Jalisco') {
+    estadocurp = 'JAL';
+}
+else if (estado == 'Michoacan') {
+    estadocurp = 'MIC';
+}
+else if (estado == 'Nayarit') {
+    estadocurp = 'NAY';
+}
+else if (estado == 'Nuevo León') {
+    estadocurp = 'NLE';
+}
+else if (estado == 'Oaxaca') {
+    estadocurp = 'OAX';
+}
+else if (estado == 'Puebla') {
+    estadocurp = 'PUE';
+}
+else if (estado == 'Querétaro') {
+    estadocurp = 'QRO';
+}
+else if (estado == 'Quintana Roo') {
+    estadocurp = 'ROO';
+}
+else if (estado == 'San Luis Potosí') {
+    estadocurp = 'SLP';
+}
+else if (estado == 'Sinaloa') {
+    estadocurp = 'SIN';
+}
+else if (estado == 'Sonora') {
+    estadocurp = 'SON';
+}
+else if (estado == 'Tabasco') {
+    estadocurp = 'TAB';
+}
+else if (estado == 'Tamaulipas') {
+    estadocurp = 'TAM';
+}
+else if (estado == 'Tlaxcala') {
+    estadocurp = 'TLX';
+}
+else if (estado == 'Veracruz ') {
+    estadocurp = 'COL';
+}
+else if (estado == 'Yucatán') {
+    estadocurp = 'YUC';
+}
+else if (estado == 'Zacatecas') {
+    estadocurp = 'ZAC';
+}
+
+
+//console.log(apellidopaternoCURP);
+//console.log(apellidomaternoCURP);
+console.log(fechanacimientoCurp);
+console.log(generoCurp);
+console.log(estadocurp);
