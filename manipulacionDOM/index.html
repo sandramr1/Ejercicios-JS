@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Nodo Documento -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Assets/CSS/DOM.CSS"> 
+    
+</head>
+<body>
+
+    <h1 id="TituloBienvenida" class="titulos"> Hola Generation, estoy aprendiendo a modificar el DOM</h1>
+
+    <h2 id="TituloMasTarde" class="titulos"> Este es otro titulo, que utilizare mas tarde</h2>
+
+    <h3 id="TituloMasTarde2" class="titulos"> Otro titulo </h3>
+
+
+<p class="parrafito" id="parrafo1" > <!--Nodo del tipo element + atributo asociado al nodo del tipo element-->
+    HOLA A TODXS
+    </p>
+ <p class="parrafito" >Este es mi segundo parrafo</p>
+ <p class="parrafito">este es mi tercer parrafo</p> 
+
+ <form>
+     <label> Indicador de cuanto le gustan los chilaquiles verdes a Felipe </label>
+     <input type="range" class="rango">
+  
+ </form>
+ 
+ <!--Ejercicio botones on click-->
+ <!--Creamos un header que cambiara de color-->
+ <h1 class="Header1"> Este texto cambiara de color</h1>
+ <!--Creamos un boton con un evento que aplicara el cambio de color-->
+ <!--Este evento esta ligado a una funcion para cambiar de color-->
+ <button onclick="cambiarColor('blue')" class="azul" > cambiar azul</button> 
+ <button onclick="cambiarColor('red')" class="rojo" > cambiar rojo</button> 
+ <button onclick="cambiarColor('orange')" class="naranja" > cambiar naranja</button> 
+ <button onclick="cambiarColor('green')" class="verde" > cambiar verde</button> 
+
+ <button onclick="cambiarColor('black')" class="reset" > reset</button> 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--Este es un bonito comentario-->  <!--NODO-->
+    <script src="./Assets/JS/DOM.JS"> </script>
+ 
+
+
+</body>
+</html>
