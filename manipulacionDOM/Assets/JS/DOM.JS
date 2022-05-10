@@ -154,3 +154,36 @@ const textoAModificar = document.querySelector(".Header1");
 function cambiarColor(color){ //Recibo como parametro el color a cambiar, y este parametro lo voy a obtener del HTML
     textoAModificar.style.color = color; //Cambio el color del texto
 }
+
+
+//?Evento load y unload(<elemento onload = "funcionAEjecutar()"></elemento>)
+
+/*
+Estos eventos se ejecutan cuando el usuario entra o sale de la pagina. El evento se puede utilizar para verificar el tipo de navegador del visitante, version, etc. Estos eventos se usan para tratar con cookies.
+
+*/
+const texto1 = document.getElementById("cookies")
+texto1.onload = checarCookies();
+
+function checarCookies(){
+    var texto = ""; //creo una variable texto vacia
+    if (navigator.cookieEnabled == true){ //Reviso si estan habilitadas las cookies
+        texto = "Las cookies estan habilitadas";
+    }else{
+        texto= "Las cookies estan deshabilitadas";
+    }
+    document.getElementById("cookies").innerHTML=texto;
+}
+
+
+//? Evento onmouseover y onmouseout (<elemento onmouseover = "functionAejecutar()"> </elemento>)
+
+function mouseOver(mensaje){
+    mensaje.innerHTML= "El mouse SI esta sobre mi";
+    
+}
+
+function mouseOut(mensaje){
+    mensaje.innerHTML = "El mouse NO esta sobre mi";
+}
+
