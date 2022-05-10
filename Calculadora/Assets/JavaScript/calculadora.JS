@@ -87,22 +87,22 @@ function init(){
         switch(operacion){
             case "1":
               res = parseFloat(operandoa) + parseFloat(operandob);
-              console.log(res)
+              resultado.textContent=res;
               break;
             case "2":
                 res = parseFloat(operandoa) - parseFloat(operandob);
-                console.log(res)
+                resultado.textContent=res;
                 break;
             case "3":
               res = parseFloat(operandoa) * parseFloat(operandob);
-              console.log(res)
+              resultado.textContent=res;
               break;
             case "4":
               res = parseFloat(operandoa) / parseFloat(operandob);
-              console.log(res)
+              resultado.textContent=res;
               break;
           }
-        //resolver();
+ 
     }
 };
 
@@ -117,21 +117,3 @@ function resetear(){
 };
 
 
-/*function resolver(){
-    var res = 0;
-    switch(operacion){
-      case "1":
-        res = parseFloat(operandoa) + parseFloat(operandob);
-        break;
-      case "2":
-          res = parseFloat(operandoa) - parseFloat(operandob);
-          break;
-      case "3":
-        res = parseFloat(operandoa) * parseFloat(operandob);
-        break;
-      case "4":
-        res = parseFloat(operandoa) / parseFloat(operandob);
-        break;
-    }
-}
-*/
